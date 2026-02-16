@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title translate="no">Perla Homes - Check-In</title>
+
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Overlay for sidebar -->
+  <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
+
+  <!-- Sidebar Menu -->
+  <div id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="closeSidebar()">&times;</button>
+    <a href="check_in.html">Check-In</a>
+
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown('wifiDropdown')">Wi-Fi Code</button>
+      <div id="wifiDropdown" class="dropdown-content">
+        <p>
+          <strong>Network:</strong> <span id="wifiNetwork"></span>
+          <button class="copy-btn" onclick="copyText('wifiNetwork')">Copy</button>
+        </p>
+        <p>
+          <strong>Password:</strong> <span id="wifiPassword"></span>
+          <button class="copy-btn" onclick="copyText('wifiPassword')">Copy</button>
+        </p>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown('codeDropdown')">Entrance Code</button>
+      <div id="codeDropdown" class="dropdown-content">
+        <p><strong>Code:</strong> <span id="entranceCode"></span></p>
+      </div>
+    </div>
+
+    <a class="map-link" target="_blank">Map</a>
+    <a class="tourist-link" target="_blank">Tourist Guide</a>
+    <a href="Taverns.html" target="_blank">Gastronomic Suggestions</a>
+    <a href="https://nauticholics.gr" target="_blank">Boat Cruises</a>
+    <a href="contacts.html">Contacts</a>
+  </div>
+
+  <!-- Sidebar open button -->
+  <button class="open-btn" onclick="openSidebar()">☰ Menu</button>
+
+  <!-- Google Translate -->
+  <div id="google_translate_element"></div>
+
+  <!-- Main Content -->
+  <div class="content-container">
+    <a href="index.html" class="home-button fade-in">
+      <button>Home Page</button>
+    </a>
+
+    <img src="images/perla logo site.png" alt="Perla Homes Logo" id="logo" class="fade-in" />
+    <h1 id="main-heading" class="fade-in"></h1>
+
+    <div class="content fade-in">
+        <p class="highlight-full">
+        <strong>Entrance Code:</strong> <span id="entranceCode"></span>
+    </p>
+    <div class="popup-content">
+        <p>When you arrive you will see this building.</p>
+        <img src="images/Garden.jpg" class="popup-image">
+        <p>The private parking spot is on the left of the entrance.</p>
+         <img src="images/Parking.jpg" class="popup-image">
+          <p class="highlight-full">
+            <strong>Entrance Code:</strong> <span id="entranceCode"></span> 
+            <img src="images/front.jpg" class="popup-image">
+        </p>
+
+
+      <h2>Wi-Fi</h2>
+      <p>UserName: <span id="wifiNetwork"></span></p>
+      <p>Password: <span id="wifiPassword"></span></p>
+      <img src="images/wifi2.png" alt="Wi-Fi" />
+
+      <h2>Hot Water</h2>
+      <p>The Apartment has Solar Boiler if there is no Hot water
+Please press the button to turn on the water heater, it turns off automaticly after 40 minutes.</p>
+      <img src="images/perla1pinakas.jpg" alt="Electric Panel" />
+
+      <h2>Check-Out</h2>
+      <p>Check-out Time: 11:00 AM</p>
+      <p>Please leave the keys on the table and close the door behind you.<br>  
+         Thank you for choosing Perla Homes!</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer fade-in">
+      <div class="social-media">
+        <a href="https://www.facebook.com/PerlaHomesgr/" target="_blank"><i class="fab fa-facebook social-icon"></i></a>
+        <a href="https://www.instagram.com/perla.homes/" target="_blank"><i class="fab fa-instagram social-icon"></i></a>
+        <a href="https://www.perlahomes.gr" target="_blank"><i class="fas fa-home social-icon"></i></a>
+      </div>
+      <p>&copy; 2026 Perla Homes. All rights reserved.</p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
