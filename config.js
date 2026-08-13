@@ -4,8 +4,8 @@ const SITE_CONFIG = {
     mapLink: "https://maps.app.goo.gl/41eMcVaV7bhDoGmd6",
     touristLink: "https://messinia.mobi/el/article/katalumata/enoikiazomena-domatia/garden-by-the-sea-enoikazomena-diamerismata/9680",
     wifi: {
-        network: "Theonis",
-        password: "NOVA6944145345"
+        network: "Under the Router",
+        password: "Under the Router"
     },
     entranceCode: "3351",
     keyBoxCode: "3351"
